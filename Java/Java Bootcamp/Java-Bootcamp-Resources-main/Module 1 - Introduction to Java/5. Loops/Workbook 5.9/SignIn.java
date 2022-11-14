@@ -10,10 +10,23 @@ public class SignIn {
        */
         Scanner scan = new Scanner(System.in);
         System.out.println("\nWelcome to Javagram! Sign in below\n");
+        String userNameIn = " ";
+        String passWordIn = " ";
         System.out.print("- Username: ");
         //pick up username
+        userNameIn = scan.nextLine();
         System.out.print("- Password: ");
-        //pick up password
+        passWordIn = scan.nextLine();
+        while(!userNameIn.equals(username) && !passWordIn.equals(password)){
+            System.out.println("Incorrect please try again");
+            System.out.print("- Username: ");
+            //pick up username
+            userNameIn = scan.nextLine();
+            System.out.print("- Password: ");
+            passWordIn = scan.nextLine();
+            //pick up password
+        }
+        System.out.println("Sign in Succesful. Welcome");
 
         // see Learn the Part for the remaining instructions.
         

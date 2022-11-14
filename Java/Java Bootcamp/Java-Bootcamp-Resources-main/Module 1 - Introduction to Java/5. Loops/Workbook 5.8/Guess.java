@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Guess  {
@@ -6,6 +7,12 @@ public class Guess  {
        System.out.print("I chose a number between 1 and 5. Try to guess it: ");
         
        Scanner scan = new Scanner(System.in);
+
+       int secret = 5;
+
+       while (scan.nextInt() != secret){
+        System.out.print("Guess again!");
+       }
        
        //See Learn the Part for detailed instructions.
         
